@@ -1,0 +1,47 @@
+/* ===== Hide Shorts everywhere (only when enabled) ===== */
+
+/* Left sidebar Shorts button */
+html.shorts-blocker-enabled a[title="Shorts"],
+html.shorts-blocker-enabled ytd-guide-entry-renderer a[href="/shorts"],
+html.shorts-blocker-enabled ytd-mini-guide-entry-renderer a[href="/shorts"] {
+  display: none !important;
+}
+
+/* Shorts shelves on homepage or subscriptions */
+html.shorts-blocker-enabled ytd-rich-section-renderer:has(a[href^="/shorts"]),
+html.shorts-blocker-enabled ytd-reel-shelf-renderer {
+  display: none !important;
+}
+
+/* Shorts videos in grids */
+html.shorts-blocker-enabled a[href^="/shorts/"] {
+  display: none !important;
+}
+
+/* ===== Hide Instagram Reels (only when enabled) ===== */
+
+/* Reels tab and navigation entries */
+html.shorts-blocker-enabled a[href="/reels/"],
+html.shorts-blocker-enabled a[href^="/reel/"],
+html.shorts-blocker-enabled a[href^="/reels/"],
+html.shorts-blocker-enabled a[href^="/explore/reels/"] {
+  display: none !important;
+}
+
+/* Reels icon button */
+html.shorts-blocker-enabled svg[aria-label="Reels"] {
+  display: none !important;
+}
+
+/* Reels tiles in grids */
+html.shorts-blocker-enabled a[href*="/reel/"] {
+  display: none !important;
+}
+
+/* ===== Hide TikTok content (only when enabled) ===== */
+
+/* Hide main app content to prevent endless video feed */
+html.shorts-blocker-enabled #app,
+html.shorts-blocker-enabled #root {
+  display: none !important;
+}
